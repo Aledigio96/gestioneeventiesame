@@ -1,5 +1,6 @@
 package digiovannialessandro.gestioneeventiesame.payloads;
 
+import digiovannialessandro.gestioneeventiesame.enums.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -20,6 +21,7 @@ public record NewUtenteDTO (
     String email,
 
     @NotBlank(message = "La password è obbligatoria")
-    String password
-
+    String password,
+    @NotBlank(message = "il ruolo è obbligatorio")
+    Role role
 ){}
